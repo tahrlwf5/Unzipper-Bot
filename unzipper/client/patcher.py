@@ -30,7 +30,7 @@ class PatchMethods:
         # Checking if user is banned
         is_banned = await is_user_in_bdb(int(message.from_user.id))
         if is_banned:
-            await message.reply("**Sorry You're Banned!** \n\nReport this at @Nexa_bots if you think this is a mistake")
+            await message.reply("**آسف أنت محظور!** \n\nأبلغ عن هذا الى مسؤول @ta_ja199 إذا كنت تعتقد أن هذا خطأ")
             raise UserIsBanned
         # Chacking if user already in db
         is_in_db = await is_user_in_db(int(message.from_user.id))
@@ -39,7 +39,7 @@ class PatchMethods:
                 await add_user(int(message.from_user.id))
                 await self.send_message(
                     chat_id=Config.LOGS_CHANNEL,
-                    text=f"**#NEW_USER** 🎙 \n\n**User Profile:** `{message.from_user.mention}` \n**User ID:** `{message.from_user.id}` \n**Profile Url:** [Click here](tg://user?id={message.from_user.id})",
+                    text=f"**#مستخدم_جديد** 🎙 \n\n**بروفايل  المستخدم:** `{message.from_user.mention}` \n**اي دي مستخدم** `{message.from_user.id}` \n**رابط البروفايل:** [Click here](tg://user?id={message.from_user.id})",
                     disable_web_page_preview=True
                 )
             except Exception as e:

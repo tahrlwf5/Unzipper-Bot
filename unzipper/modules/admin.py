@@ -50,27 +50,27 @@ async def send_stats(_, message: Message, texts):
     total_users = await count_users()
     total_banned_users = await count_banned_users()
     usrtxt = f"""
-**👥 Users:** 
- ↳**Users in Database:** `{total_users}`
- ↳**Total Banned Users:** `{total_banned_users}`
+**👥 Users(مستخدمين):** 
+ ↳**Users in Database(مستخدمين في قاعدة البيانات):** `{total_users}`
+ ↳**Total Banned Users(إجمالي  المستخدمين محظورين):** `{total_banned_users}`
 
 """
     # Show status
     await stats_msg.edit(f"""
-**💫 Current Bot Stats 💫**
+**💫 Current Bot Stats|حالة البوت حاليا 💫**
 {usrtxt if frmow else ""}
-**🌐 Bandwith Usage,**
- ↳ **Sent:** `{humanbytes(net_usage.bytes_sent)}`
- ↳ **Received:** `{humanbytes(net_usage.bytes_recv)}`
+**🌐 Bandwith Usage(إستخدام النطاق),**
+ ↳ **Sent(إرسال):** `{humanbytes(net_usage.bytes_sent)}`
+ ↳ **Received(استقبال):** `{humanbytes(net_usage.bytes_recv)}`
 
 
-**💾 Disk Usage,**
- ↳**Total Disk Space:** `{total}`
- ↳**Used:** `{used}({cdisk_usage}%)`
- ↳**Free:** `{free}`
+**💾 Disk Usage(استخدام القرص),**
+ ↳**Total Disk Space(إجمالي مساعة القرص):** `{total}`
+ ↳**Used(المستخدم):** `{used}({cdisk_usage}%)`
+ ↳**Free(الخالي):** `{free}`
 
 
-**🎛 Hardware Usage,**
+**🎛 Hardware Usage(استخدام الهاردوير),**
  ↳**CPU Usage:** `{cpu_usage}%`
  ↳**RAM Usage:** `{ram_usage}%`""")
 

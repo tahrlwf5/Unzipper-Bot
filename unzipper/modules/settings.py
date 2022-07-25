@@ -21,7 +21,7 @@ from unzipper.database.upload_mode import get_upload_mode
 @unzip_client.handle_erros
 async def gofile_settings(_, message: Message, texts):
     prs_msg = await message.reply(texts["processing"], reply_to_message_id=message.id)
-    await prs_msg.edit("**Gofile.io settings ⚙️**", reply_markup=Buttons.SETTINGS_GOFILE)
+    await prs_msg.edit("**Gofile.io settings |الإعدادات ⚙️**", reply_markup=Buttons.SETTINGS_GOFILE)
 
 
 @unzip_client.on_message(filters.private & filters.command(["mode", "setmode"]))

@@ -98,9 +98,9 @@ class UnzipperBot(Client):
                     ga = Async_Gofile()
                     gfio = await ga.upload(doc_f)
                     from unzipper import Buttons
-                    await upmsg.edit("**Your file has been uploaded to gofile! Click on the below button to download it 👇**", reply_markup=await Buttons.make_button("Gofile link 🔗", url=gfio["downloadPage"]))
+                    await upmsg.edit("**تم تحميل ملفك إلى gofile!  انقر فوق الزر أدناه لتنزيله 👇**", reply_markup=await Buttons.make_button("Gofile link 🔗", url=gfio["downloadPage"]))
                 except:
-                    await upmsg.edit("`Upload failed, Better luck next time 😔!`")
+                    await upmsg.edit("`فشل التحميل ، حظ أفضل في المرة القادمة!`")
                 remove(doc_f)
                 return
 
@@ -114,22 +114,22 @@ class UnzipperBot(Client):
                 await self.send_video(
                     chat_id=c_id,
                     video=doc_f,
-                    caption="**Extracted by @NexaUnzipper_Bot**",
+                    caption="**Extracted by(استخرج بواسطة) @unzipunrarprobot**",
                     duration=int(
                         vid_duration) if vid_duration.isnumeric() else 0,
                     thumb=sthumb,
                     progress=progress_for_pyrogram,
-                    progress_args=("**Trying to upload 😇** \n", tgupmsg, stm))
+                    progress_args=("**Trying to upload |محاولة التحميل😇** \n", tgupmsg, stm))
             # Upload type: Document
             else:
                 sthumb = await self.get_or_gen_thumb(c_id, doc_f)
                 await self.send_document(
                     chat_id=c_id,
                     document=doc_f,
-                    caption="**Extracted by @NexaUnzipper_Bot**",
+                    caption="**Extracted by(استخرج بواسطة) @unzipunrarprobot **",
                     thumb=sthumb,
                     progress=progress_for_pyrogram,
-                    progress_args=("**Trying to upload 😇** \n", tgupmsg, stm))
+                    progress_args=("**Trying to upload|محاولة التحميل😇** \n", tgupmsg, stm))
             etm = time()
 
             # Edit the progress message

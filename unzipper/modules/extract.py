@@ -62,7 +62,7 @@ async def extract_dis_archive(_, message: Message, texts):
             await message.download(
                 file_name=arc_name,
                 progress=progress_for_pyrogram, progress_args=(
-                    "**Trying to Download!** \n", unzip_msg, s_time)
+                    "**Trying to Download!|محاولة التنزيل** \n", unzip_msg, s_time)
             )
         e_time = time()
         await unzip_msg.edit(texts["ok_download"].format(file_name, TimeFormatter(round(e_time-s_time) * 1000)))

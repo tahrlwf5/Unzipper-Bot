@@ -1,30 +1,30 @@
 {
-    "about": "About ⁉️",
-    "clean": "Clean My Files 😇",
-    "upload_all": "Upload All ♻️",
+    "about": "About|حول⁉️",
+    "clean": "Clean My Files|تنضيف ملفاتي 😇",
+    "upload_all": "Upload All|تحميل الكل ♻️",
     
-    "cancel": "Cancel ❌",
-    "no_cancel": "Nooo 😳!",
+    "cancel": "Cancel|إلغاء ❌",
+    "no_cancel": "Nooo 😳لا!",
     
-    "back": "Back 🏡",
-    "back_to_help_menu": "Back to Help Menu ◀️",
+    "back": "Back|عودة 🏡",
+    "back_to_help_menu": "Help menu|قائمة مساعدة◀️",
     
-    "help": "Help 📜",
-    "help_extract": "Extract 🗃",
-    "help_upload": "Upload 📤",
-    "help_thumbnail": "Thumbnail 🖼",
-    "help_backup": "Backup 🗄",
-    "help_langs": "Languages 🗣",
+    "help": "Help |مساعدة 📜",
+    "help_extract": "Extract|استخراج 🗃",
+    "help_upload": "Upload|رفع 📤",
+    "help_thumbnail": "Thumbnail صورة مصغرة 🖼",
+    "help_backup": "Backup|دعم 🗄",
+    "help_langs": "Languages|اللغة 🗣",
 
-    "extract_file": "File Extract 📂",
-    "extract_file_pass": "File (Password) Extract 📂",
-    "extract_url": "🔗 Url Extract 📂",
-    "extract_url_pass": "🔗 (Password) Url Extract 📂",
+    "extract_file": "File Extract|استخراج ملف📂",
+    "extract_file_pass": "File (Password) Extract باس وورد📂",
+    "extract_url": 🔗 Url Extract|استخراج رابط 📂",
+    "extract_url_pass": "🔗 (Password) Url Extract | باس وورد📂",
 
-    "gofile_set": "Set token",
-    "gofile_get": "Get token",
-    "gofile_del": "Delete token",
+    "gofile_set": "Set token|اختر توكن",
+    "gofile_get": "Get token|حصول على توكن",
+    "gofile_del": "Delete token|حذف توكن",
 
-    "as_vid": "As Video 📹",
-    "as_doc": "As Doc 📁"
+    "as_vid": "As Video|كفيديو 📹",
+    "as_doc": "As Doc |كملف📁"
 }

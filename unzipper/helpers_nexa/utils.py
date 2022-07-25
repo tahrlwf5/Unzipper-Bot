@@ -36,13 +36,13 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             elapsed_time = TimeFormatter(elapsed_time)
             estimated_total_time = TimeFormatter(estimated_total_time)
 
-            progress = "║ {0}{1} ║ \n**📊 Progress**: {2}%\n".format(
+            progress = "║ {0}{1} ║ \n**📊 Progress(التقدم)**: {2}%\n".format(
                 ''.join(["◉" for i in range(floor(percentage / 5))]),  # Filled
                 # Empty
                 ''.join(["◎" for i in range(20 - floor(percentage / 5))]),
                 round(percentage, 2))
 
-            tmp = progress + "{0} of {1}\n**🏃 Speed:** {2}/s\n**⏰ ETA:** {3}\n".format(
+            tmp = progress + "{0} of {1}\n**🏃 Speed(السرعة):** {2}/s\n**⏰ ETA(الوقت):** {3}\n".format(
                 humanbytes(current),
                 humanbytes(total),
                 humanbytes(speed),
@@ -53,14 +53,14 @@ async def progress_for_pyrogram(current, total, ud_type, message, start):
             except:
                 pass
     else:
-        tmp = "**📊 Progress:** {0} of {1}\n**🏃 Speed:** {2}/s\n**⏰ ETA:** {3}\n".format(
+        tmp = "**📊 Progress(التقدم):** {0} of {1}\n**🏃 Speed(السرعة):** {2}/s\n**⏰ ETA(الوقت):** {3}\n".format(
             humanbytes(current),
             "?",
             humanbytes(speed),
             "unknown"
         )
         try:
-            await message.edit("{}\n {} \n\n**Powered by @NexaBotsUpdates**".format(ud_type, tmp))
+            await message.edit("{}\n {} \n\n**Powered by @engineering_electrical9**".format(ud_type, tmp))
         except:
             pass
 
